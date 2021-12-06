@@ -13,6 +13,7 @@ const validatelogin = () =>{
         alert("please add all required fields");
         return false;
     }else{
+        window.location.href = "facebookmain.html";
         return true;
     }
 }
