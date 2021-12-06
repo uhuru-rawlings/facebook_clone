@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="password.js"></script>
+    <title>facebook-login or signup</title>
+</head>
+<body>
+    <nav id="registration">
+      <div class="container" id="nav-container">
+          <div class="logs">
+              <a href="index.html"><img src="images/facebooks.png" alt="" title="go to facebook home" width="170px" height="60px"></a>
+              <input type="submit" value="sign-up" id="signsup">
+          </div>
+          <div class="texts">Join or sign up to facebook <img src="images/dropdown.png" onclick="signupsfacebook(this.id)" width="15px" height="15px" alt=""></div>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="fix-text">
+            <h3>Create a page</h3>
+            <p>Connect your business, yourself or your cause to the worldwide community of people on Facebook. To get started, choose a Page category.</p>
+        </div>
+    </div>
+    <div class="container" id="flex-card">
+        <div class="card" id="card1">
+            <img src="images/div1.png" width="200px" height="200px" alt="">
+            <h4>Business and Brand</h4>
+            <p>Showcase your products and services, spotlight your brand and <br> reach more customers on Facebook.</p>
+            <button>Get started</button>
+        </div>
+        <div class="card" id="card1">
+            <img src="images/div2.png" width="200px" height="200px" alt="">
+            <h4>Community or Public figure</h4>
+            <p>Connect and share with people in your community, organisation, <br> team, group or club.</p>
+            <button>Get started</button>
+        </div>
+    </div>
+       <script>
+           const signupsfacebook = () =>{
+                var elemts = document.getElementById("top-form");
+                if(elemts){
+                    document.getElementById("top-form").style.display = "block";
+                    document.getElementById("top-form").id = "top-forms";
+                }else{
+                    document.getElementById("top-forms").style.display = "none";
+                    document.getElementById("top-forms").id = "top-form";
+                }
+            }
+       </script>
+    <div class="topforms" id="top-form">
+        <div class="tops">
+            <label for="">Email or Phone
+                <br>
+                <input type="text" name="useremils" id="useremils">
+            </label>
+            <label for="">Password
+                <br>
+                <input type="password" name="Password" id="Password">
+            </label>
+            <a href="reset.html" class="foregets">forgetten password?</a>
+            <button id="login">Log In</button>
+        </div>
+        <div class="separate-div">
+        <p>Do you want to join Facebook?</p>
+        <button id="signup">Sign Up</button>
+        </div>
+    </div>
+</body>
+</html>

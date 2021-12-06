@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="password.js"></script>
+    <title>facebook-login or signup</title>
+</head>
+<body>
+    <div class="container" id="logincontainer">
+        <div class="body-login">
+            <h2 class="facebook"><img src="images/facebook.svg" width="170px" height="70px" alt=""></h2>
+            <span class="recentlogins">Recent logins</span>
+            <br>
+            <span>Click your picture or add an account.</span>
+            <br>
+            <br>
+            <div class="cards">
+                <div class="card" id="card-first">
+                    <i class="fa fa-times-circle" aria-hidden="true" id="closeicon"></i>
+                    <img src="images/facebook.jpg" width="100%" height="170px">
+                    <p>Uhuru</p>
+                </div>
+           
+                <div class="card">
+                   <div class="plus facebook" id="facebook">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                   </div>
+                    <p class="facebook">Add Account</p>
+                </div>
+            </div>
+        </div>
+        <div class="login-form">
+            <form action="facebookmain.html" method="post">
+                <input type="text" class="form-control" name="username" id="username" placeholder="Email adress or phone number">
+                <br>
+                <input type="password" class="form-control" name="passwords" id="passwords" placeholder="Password"> <i class="fa fa-eye-slash" aria-hidden="true" id="showpasswords" onclick="showpassword()"></i>
+                <br>
+                <br>
+                <input type="submit" value="Log In" onclick="return validatelogin()" class="btn btn-primary">
+                <br>
+                <br>
+                <a href="reset.html">forget Password?</a>
+                <br>
+                <hr>
+                <br>
+            </form>
+                <input type="submit" value="Create New Account" onclick="opensignups()"  id="newaccount" class="btn btn-primary" >
+            
+        </div>
+    </div>
+    <div class="celebrity">
+        <p><a href="registration_form.html"><strong>Create a Page</strong></a> for a celebrity, brand or business.</p>
+    </div>
+    <div class="signup-main" id="signup-main">
+        <div class="signup-sub" id="signup-sub">
+            <form action="#" method="post">
+                <div class="signup-text">
+                    <div>
+                        <h2>Sign Up</h2>
+                        <p>Its quick and easy</p>
+                    </div>
+                    <div class="closes" onclick="closesignups()">&times;</div>
+                </div>
+                <hr>
+                <div class="divs-suns">
+                    <div class="col-forms">
+                        <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Firstname" required>
+                        <input type="text" name="surnames" class="form-control" id="surnames" placeholder="Surname" required>
+                    </div>
+                    <input type="text" name="usernames" class="form-control" id="usernames1" placeholder="Mobile number or Email adress" required>
+
+                    <input type="password" name="passwordnew" class="form-control" id="passwordnew" placeholder="New password" required>
+                    <div>
+                        <span class="lower-text">Date of Birth</span> <span title="click for more information" class="more-info">?</span>
+                        <div class="dobs">
+                            <select name="days" id="days"></select>
+                            <select name="months" id="months"></select>
+                            <select name="years" id="years"></select>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="lower-text">Gender</span> <span title="click for more information" class="more-info">?</span>
+                        <div class="genger">
+                            <span><label><em>Female</em> <input type="radio" name="female" id="female"> </label></span>
+                            <span><label><em>Male</em> <input type="radio" name="male" id="male"> </label></span>
+                            <span><label><em>Custom</em> <input type="radio" name="Custom" id="Custom"></label></span>
+                        </div>
+                    </div>
+                    <p class="lower-text">By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You  <br> may receive SMS notifications from us and can opt out at any time.</p>
+                    <input type="submit" value="Sign Up" id="mainsignups">
+                </div>
+            </form>
+        </div>
+        <script>
+            var target1 = document.getElementById("days");
+            for(var d = 1; d < 32; d++){
+                var options = document.createElement("OPTION");
+                options.setAttribute("value",d);
+                options.innerHTML = d;
+                target1.appendChild(options);
+            }
+            var target2 = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AGU","SEP","OCT","NOV","DEC"];
+            for(var m = 0; m < target2.length; m++){
+                var options2 = document.createElement("OPTION");
+                options2.setAttribute("value",target2[m]);
+                options2.innerHTML = target2[m];
+                document.getElementById("months").appendChild(options2);
+            }
+            for(var y = 1905; y < 2022; y++){
+                var options3 = document.createElement("OPTION");
+                options3.setAttribute("value",y);
+                options3.innerHTML = y;
+                document.getElementById("years").appendChild(options3);
+            }
+        </script>
+    </div>
+</body>
+</html>
