@@ -479,3 +479,84 @@ footer a:hover{
 #signup-main,#signup-sub{
     display: none;
 }
+.manu-bars{
+    display: flex;
+    column-gap: 10px;
+}
+.images-navs{
+    display: flex;
+}
+.images-navs #me-section{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+#me-section h6{
+    font-weight: bold;
+}
+#me-section img{
+    border-radius: 50%;
+}
+nav{
+    align-items: center;
+}
+.manu-bars .images1,.manu-bars .images2,.manu-bars .images3,.manu-bars .images4,.manu-bars .images5{
+    width: 100px;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+}
+.manu-bars .images1{
+    border-bottom: 3px solid #1E84E5;
+}
+.manu-bars .images1:hover,.manu-bars .images2:hover,.manu-bars .images3:hover,.manu-bars .images4:hover,.manu-bars .images5:hover{
+    background-color: rgb(240, 235, 235);
+    border-radius: 3px;
+}
+.images-navs{
+    column-gap: 10px;
+    margin-right: 20px;
+}
+#rounded-last{
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(228, 227, 227);
+    text-align: center;
+    position: relative;
+}
+#rounded-last svg{
+   position: absolute;
+   top: 13px;
+   right: 10px;
+}
+.images-navs .border-rounded{
+    padding: 5px;
+    background-color: rgb(228, 227, 227);
+    border-radius: 50%;
+}
+.logos{
+    display: flex;
+}
+#search-label{
+    display: flex;
+    position: relative;
+}
+#search-icon{
+    position: absolute;
+    top: 8px;
+    left: 5px;
+}
+#searchitems-box{
+    border-radius: 20px;
+    padding-left: 30px;
+    background-color: #E9EBEE;
+    outline: none;
+}
+#me-section:hover {
+    background-color: #E9EBEE;
+    border-radius: 20px;
+    width: fit-content;
+    padding-right: 7px;
+}
